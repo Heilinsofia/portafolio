@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTAFOLIO</title>
+    <link rel="stylesheet" href="estilos.css">
+    
+
+    <link rel="stylesheet" href="https://unpkg.com/primeflex@^3/primeflex.css">
+    <link rel="stylesheet" href="https://unpkg.com/primeflex/themes/saga-blue.css">
+ <script src="https://kit.fontawesome.com/b3f17f1dac.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="flex w-full fixed top-0 z-1">
+        <nav class="flex justify-content-between w-full navbar">
+            <span class="logo cursor-pointer">
+               
+                <img src="./recursos/logo.png" alt="Logo portafolio" >
+            </span>
+            <input type="checkbox"  aria-label="checkbox para mostrar y quitar hamburguer menu" class="checkbox xl.hidden">
+            <div class="hamburguer__lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <div class="header__info flex align-items-center gap-3">
+                <ul class="flex flex-column xl:flex-row list-none">
+                    <li onclick="scrollToSection('about')">Sobre mí</li>
+                    <li onclick="scrollToSection('services')">Servicios</li>
+                    <li onclick="scrollToSection('portfolio')">Portafolio</li>
+                    <li onclick="scrollToSection('contact')">Contacto</li>
+                </ul>
+            </div>
+            <div class="hireMe__button pt-4">
+                <a href="mailTo:heilinsofia30@gmial.com" 
+                aria-label="eviar mensaje al correo"
+                class="cursor-pointer no-underiine-border-round-lg text-xl xl:text-sn">contratame</a>
+            </div>
+        </nav>
+    </header>
+  <!--HOME PAGE-->
+    <div class="container">
+    <section id="home"
+        class="home__page flex align-items-center justify-content-center xl\:justify-content-between grid grid-nogutter gap-4">
+        <div class="left__content col-12 xl:col-6">
+            <div class="message__bubble triangle mb-4 md:mb-2">
+                <div class="message__text p-2 sm:p-3 text-center">
+                    <p>Hola, Yo soy</p>
+                </div>
+            </div>
+            <h1 class="text-3xl sm:text-5xl md:text-7xl">Heilin Sofia</h1>
+            <p class="text-gray-500">
+                Estudiante de Produccion Multimedia 
+            </p>
+            <div class="home__buttons flex align-items-center gap-2 mt-6">
+                <a href="./recursos/Hoja de vida sofia sarmiento.pdf" aria-label="Descargar hoja de vida"
+                    class="cursor-pointer border-round-lg no-underline" download>Descargar hoja de vida </a>
+                <button onclick="scrollToSection('portfolio')" aria-label="Deslizar a sección portafolio para mostrar mis trabajos"
+                    class="cursor-pointer border-round-lg">Mi trabajo</button>
+            </div>
+        </div>
+        <div class="right__content col-9 sm:col-6 xl:col-5">
+            <img src="./recursos/foto-perfil-gigante.png" alt="Foto perfil" width="800" height="800">
+        </div>
+    </section>
+    <!--ABOUT ME-->
+    <section id="about" class="about__me w-full min-h-screen flex align-items-center">
+        <div class="aboutMe__content min-h-full flex flex-column md:flex-row pt-8 md:pt-0">
+            <div class="aboutMe__info col-12 md:col-6 md:pr-6 pt-0">
+                <h1 class="text-3xl md:text-5xl">Sobre mí</h1>
+                <p class="text-gray-500"> Soy una estudiante de producción multimedia y puedo desempeñarme en  crear y gestionar contenido digital 
+                    como videos, animaciones, gráficos y diseño interactivo. También adquiere habilidades 
+                    en edición, diseño web, producción audiovisual y herramientas de software para contar historias o crear productos visuales.</p>
+                <div class="knowledge flex flex-column gap-3 mt-7">
+                    <p>Edicion de video  80%</p>
+                    <div class="progress__bar progress__edicion-video">
+                        <span></span>
+                    </div>
+                    <p>Produccion Audiovisual 75%</p>
+                    <div class="progress__bar progress__Produccion-audiovisual">
+                        <span></span>
+                    </div>
+                    <p>Diseño Web 50%</p>
+                    <div class="progress__bar progress__Diseño-web">
+                        <span></span>
+                    </div>
+                    <p>Produccion Grafica 85%</p>
+                    <div class="progress__bar progress__Produccion-grafica">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="hireMe__button pt-4">
+                    <a href="mailTo:heilinsofia30@gmail.com" aria-label="Enviar mensaje al correo"
+                        class="cursor-pointer no-underline border-round-lg">Contratame</a>
+                </div>
+
+            </div>
+            <div class="image col p-0 mt-6 md:mt-0">
+                <img src="./recursos/foto-relacionada.jpg" alt="Foto relacionado a acerca de mí" width="100" height="100">
+            </div>
+        </div>
+    </section>
+</div>
+<!--FREE LANCER SECTION -->
+<section class="freelancer mb-4 mt-4 min-w-full flex flex-column justify-content-center align-items-center">
+    <p class="text-small">¿Tienes un proyecto en mente?</p>
+    <h1 class="text-center">Estoy disponible como freelancer</h1>
+    <div class="hireMe__button pt-4">
+        <a href="mailTo:heilinsofia30@gmail.com" aria-label="Enviar mensaje al correo"
+            class="cursor-pointer no-underline border-round-lg">Escríbeme</a>
+    </div>
+</section>
+<!--SERVICES -->
+<div class="container">
+    <section id="services" class="services min-h-full w-full pb-7">
+        <div class="services__title flex flex-column gap-3 text-center">
+            <h1 class="text-3xl md:text-5xl">PROGRAMAS</h1>
+        </div>
+        <div class="services__card w-full grid grid-nogutter mt-7 gap-5">
+            <div class="card flex align-items-center col-12 sm:col-6 lg:col-4 gap-3 p-2">
+                <div class="service__logo flex align-items-center justify-content-center">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <div class="service__name">
+                    <p>Adobe Photoshop</p>
+                </div>
+            </div>
+            <div class="card flex align-items-center col-12 sm:col lg:col-4 gap-3 p-2">
+                <div class="service__logo flex align-items-center justify-content-center ">
+                    <i class="fa-solid fa-eye"></i>
+                </div>
+                <div class="service__name">
+                    <p>Lightroom</p>
+                </div>
+            </div>
+            <div class="card flex align-items-center col-12 sm:col-6 md:col-3 lg:col gap-3 p-2">
+                <div class="service__logo flex align-items-center justify-content-center ">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <div class="service__name">
+                    <p>HTML y CSS</p>
+                </div>
+            </div>
+            <div class="card flex align-items-center col-12 sm:col md:col lg:col-4 gap-3 p-2">
+                <div class="service__logo flex align-items-center justify-content-center ">
+                    <i class="fa-solid fa-font"></i>
+                </div>
+                <div class="service__name">
+                    <p>Adobe Ilustrator</p>
+                </div>
+            </div>
+            <div class="card flex align-items-center col-12 sm:col-6 md:col-4 lg:col-4 gap-3 p-2">
+                <div class="service__logo flex align-items-center justify-content-center ">
+                    <i class="fa-solid fa-clapperboard"></i>
+                </div>
+                <div class="service__name">
+                    <p>Adobe Premier</p>
+                </div>
+            </div>
+            <div class="card flex align-items-center col-12 sm:col md:col-4 lg:col gap-3 p-2">
+                <div class="service__logo flex align-items-center justify-content-center ">
+                    <i class="fa-solid fa-headphones"></i>
+                </div>
+                <div class="service__name">
+                    <p>Adobe Audition</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--PORTFOLIO -->
+    <section id="portfolio" class="portfolio min-h-full w-full pb-8 pt-8">
+        <div class="portfolio__title flex flex-column gap-3 text-center">
+            <h1 class="text-3xl md:text-5xl">Mi trabajo</h1>
+            <p class="text-gray-400 text-sm md:text-base">
+                Con mis trabajos e ideas lograremos  todos los proyectos satisfactoriamente para así poder generar un impacto significativo con empoderamiento, armonia y sobretodo autenticidad
+            </p>
+        </div>
+        <div class="portfolio__gallery">
+            <div class="gallery__categories mb-5 mt-5">
+                <ul class="flex list-none flex-wrap justify-content-center gap-3">
+                    <li class="filter-item active" data-filter="all">Todos</li>
+                    <li class="filter-item " data-filter="gym">....</li>
+                    <li class="filter-item " data-filter="tours__Web">...</li>
+                    <li class="filter-item " data-filter="world__Tours">... </li>
+                    <li class="filter-item " data-filter="e__commerce"></li>
+                </ul>
+            </div>
+            <div class="proyect__gallery flex justify-content-center align-items-center flex-wrap gap-3">
+                <div class="project__card tours__Web">
+                    <img src="./recursos/proyecto-1.jpg" alt="">
+                    <div class="overlay"></div>
+                    <div
+                        class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
+                        <h2>COMPOSICIÓN</h2>
+                        <p>Foto tomada con tecnica de profundidad de campo 
+                        </p>
+                        <span><i class="fa-solid fa-arrow-right-long"></i></span>
+                    </div>
+                </div>
+                <div class="project__card e__commerce">
+                    <img src="./recursos/proyecto-2.jpg" alt="">
+                    <div class="overlay"></div>
+                    <div
+                        class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
+                        <h2>CONTRALUZ</h2>
+                        <p>Foto tomada con una sola fuente de luz 
+                        </p>
+                        <span><i class="fa-solid fa-arrow-right-long"></i></span>
+                    </div>
+                </div>
+                <div class="project__card tours__Web">
+                    <img src="./recursos/proyecto-3.png" alt="">
+                    <div class="overlay"></div>
+                    <div
+                        class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
+                        <h2>POSTER</h2>
+                        <p>poster realizado en ilustraitor 
+                        </p>
+                        <span><i class="fa-solid fa-arrow-right-long"></i></span>
+                    </div>
+                </div>
+                <div class="project__card gym">
+                    <img src="./recursos/proyecto-4.png" alt="">
+                    <div class="overlay"></div>
+                    <div
+                        class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
+                        <h2>PAGINA WEB</h2>
+                        <p>Realizada con html y css
+                        </p>
+                        <span><i class="fa-solid fa-arrow-right-long"></i></span>
+                    </div>
+                </div>
+                <div class="project__card world__Tours">
+                    <img src="./recursos/proyecto5.jpeg" alt="">
+                    <div class="overlay"></div>
+                    <div
+                        class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
+                        <h2>PINTURA DIGITALIZADA</h2>
+                        <p>Pintura echa a mano y luego digitalizada 
+                        </p>
+                        <span><i class="fa-solid fa-arrow-right-long"></i></span>
+                    </div>
+                </div>
+                <div class="project__card tours__Web">
+                    <img src="./recursos/proyecto6.jpeg" alt="">
+                    <div class="overlay"></div>
+                    <div
+                        class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
+                        <h2>PINTURA </h2>
+                        <p>Realizada a mano con tecnica pop art 
+                        </p>
+                        <span><i class="fa-solid fa-arrow-right-long"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--FOOTER -->
+    <footer id="contact" class="min-h-full w-full flex grid col-12 justify-content-center pb-8 pt-8 lg:text-center">
+        <div class="social__media col-12 md:col-4 flex flex-column justify-content-between">
+            <h3>Redes sociales</h3>
+            <p>Auténtica e innovadora</p>
+            <p>Desarrollo lo que necesitas, con un enfoque en innovacion y caracterización</p>
+            <div class="social__mediaIcons mt-5 flex lg:justify-content-center gap-3">
+                <a href="https://www.facebook.com/profile.php?id=100013375864432&mibextid=ZbWKwL" target="_blank" aria-label="Ir a facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/heilin_sofia?igsh=b3hvZnNlYW9hMnM=" target="_blank" aria-label="Ir a instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/heilin-sofia-9b62bb313?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="Ir a linkedin">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+        <div class="contact col-12 sm:col-6 sm:pt-0 md:pt-2 md:col-4 flex flex-column justify-content-between md:align-items-center">
+            <h3>Contacto</h3>
+            <div class="phone__number flex align-items-center gap-2">
+                <i class="fa-solid fa-phone"></i>
+                <p>+57 35025934697 3</p>
+            </div>
+            <div class="email flex align-items-center gap-2">
+                <i class="fa-solid fa-envelope"></i>
+                <p>heilinsofia30@gmail.com</p>
+            </div>
+            <a href="mailTo:heilinsofia30@gmail.com"
+                class="cursor-pointer text-center col-4 sm:col-6 xl:col-4 mt-3 no-underline border-round-lg">
+                <span>
+                    <i class="fa-solid fa-message"></i>
+                </span>Escríbeme
+            </a>
+        </div>
+        <div class="my__services col-12 sm:col-6 sm:p-0 md:col-4 md:pt-2 md:align-items-center flex flex-column justify-content-between">
+            <h3>Mis Servicios</h3>
+            <p>Audio Visuales </p>
+            <p>Diseños graficos</p>
+            <p>Fotografía</p>
+            <P>Marketing Digital</P>
+        </div>
+    </footer>
+</div>
+
+</body>
+<script>
+const filterContainer = document.querySelector(".gallery__categories");
+const galleryItems = document.querySelectorAll(".project__card");
+
+filterContainer.addEventListener("click", (event) => {
+    if (event.target.classList.contains("filter-item")) {
+        filterContainer.querySelector(".active").classList.remove("active");
+        event.target.classList.add("active")
+        const filterValue = event.target.getAttribute("data-filter")
+        galleryItems.forEach(item => {
+            if (item.classList.contains(filterValue) || filterValue === "all") {
+                item.classList.remove("hide")
+                item.classList.add("show")
+            } else {
+                item.classList.remove("show")
+                item.classList.add("hide")
+            }
+        })
+    }
+})
+
+function scrollToSection(sectionId){
+    document.getElementById(sectionId).scrollIntoView({behavior:"smooth"})
+}
+</script>
+
+</html>
